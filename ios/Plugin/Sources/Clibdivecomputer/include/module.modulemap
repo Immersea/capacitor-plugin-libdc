@@ -1,0 +1,11 @@
+module Clibdivecomputer {
+    header "libdivecomputer/common.h"
+    header "libdivecomputer/context.h"
+    header "libdivecomputer/descriptor.h"
+    header "libdivecomputer/device.h"
+    header "libdivecomputer/parser.h"
+    header "libdivecomputer/version.h"
+    header "libdivecomputer/custom.h"
+    header "libdivecomputer/iostream.h"
+    export *
+} 

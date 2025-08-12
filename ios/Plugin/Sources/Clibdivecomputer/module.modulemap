@@ -1,0 +1,6 @@
+module Clibdivecomputer [system] {
+    header "shim.h"
+    link "divecomputer"
+    link "pthread"
+    export *
+}
