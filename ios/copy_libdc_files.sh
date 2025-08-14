@@ -19,6 +19,15 @@ mkdir -p "$PLUGIN_PATH/Sources/LibDCSwift/ViewModels"
 cp -R "$LIBDC_SWIFT_PATH/Sources/Clibdivecomputer/include/" "$PLUGIN_PATH/Sources/Clibdivecomputer/include/"
 cp "$LIBDC_SWIFT_PATH/Sources/Clibdivecomputer/module.modulemap" "$PLUGIN_PATH/Sources/Clibdivecomputer/"
 
+# Copy libdivecomputer header files
+mkdir -p "$PLUGIN_PATH/Sources/Clibdivecomputer/include/libdivecomputer"
+cp -R "$LIBDC_SWIFT_PATH/libdivecomputer/include/libdivecomputer/"* "$PLUGIN_PATH/Sources/Clibdivecomputer/include/libdivecomputer/"
+
+# Copy libdivecomputer source files
+mkdir -p "$PLUGIN_PATH/Sources/Clibdivecomputer/src"
+cp "$LIBDC_SWIFT_PATH/libdivecomputer/src/"*.c "$PLUGIN_PATH/Sources/Clibdivecomputer/src/"
+cp "$LIBDC_SWIFT_PATH/libdivecomputer/src/"*.h "$PLUGIN_PATH/Sources/Clibdivecomputer/src/"
+
 # Copy LibDCBridge files
 cp -R "$LIBDC_SWIFT_PATH/Sources/LibDCBridge/include/" "$PLUGIN_PATH/Sources/LibDCBridge/include/"
 cp -R "$LIBDC_SWIFT_PATH/Sources/LibDCBridge/src/" "$PLUGIN_PATH/Sources/LibDCBridge/src/"

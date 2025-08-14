@@ -48,6 +48,14 @@ fi
 cp "$LIBDC_JAVA_PATH/exception.c" "$PLUGIN_PATH/src/main/cpp/"
 cp "$LIBDC_JAVA_PATH/exception.h" "$PLUGIN_PATH/src/main/cpp/"
 cp "$LIBDC_JAVA_PATH/org_libdivecomputer_Context.c" "$PLUGIN_PATH/src/main/cpp/"
+
+# Copy libdivecomputer source files
+LIBDC_SWIFT_PATH="../libdc-swift-main"
+mkdir -p "$PLUGIN_PATH/src/main/cpp/libdivecomputer"
+mkdir -p "$PLUGIN_PATH/src/main/cpp/include/libdivecomputer"
+cp "$LIBDC_SWIFT_PATH/libdivecomputer/src/"*.c "$PLUGIN_PATH/src/main/cpp/libdivecomputer/"
+cp "$LIBDC_SWIFT_PATH/libdivecomputer/src/"*.h "$PLUGIN_PATH/src/main/cpp/libdivecomputer/"
+cp "$LIBDC_SWIFT_PATH/libdivecomputer/include/libdivecomputer/"*.h "$PLUGIN_PATH/src/main/cpp/include/libdivecomputer/"
 cp "$LIBDC_JAVA_PATH/org_libdivecomputer_Context.h" "$PLUGIN_PATH/src/main/cpp/"
 cp "$LIBDC_JAVA_PATH/org_libdivecomputer_Custom.c" "$PLUGIN_PATH/src/main/cpp/"
 cp "$LIBDC_JAVA_PATH/org_libdivecomputer_Custom.h" "$PLUGIN_PATH/src/main/cpp/"
